@@ -22,31 +22,75 @@ We're going to look at writing tests for code.
 
 ## Learning Outcomes
 
-- Read and interpret somebody else's code
-- Extract out reusable helper functions
-- Articulate the DRY principle
+- Write tests for existing code
+- Run Python tests with pytest
+- Debug failings tests run with pytest
 
-## Exercise 1: Reading some sample code
+## Exercise 0: Installing and running tests with `pytest`
 
-> 🎯 **Success criterion:** a document which outlines your initial thoughts on the readability, strengths and weaknesses of a sample solution.
+> 🎯 **Success criterion:** You are able to run `pytest` in your terminal and see test results as expected.
 
-The file `original/main.py` has the some existing code.
+We'll be writing tests using the `pytest` framework.
 
-We'll be improving it through refactoring soon - but, for now, your task is only to _read_ it and collect some thoughts on the code.
+From the [`pytest` docs](https://docs.pytest.org/en/stable/getting-started.html), you should:
 
-Here are some prompts for you to consider:
+- Read and follow _Install `pytest`_
+- Read and follow _Create your first test_
 
-1. **Quick big picture.** How skimmable is the code in the way that it is structured? (This is important because in a codebase you will want to have a big picture in mind, separate from the implementation details.)
-2. **Clarity of intent.** How clear to you is the _intent_ of the code is? (This is important because code with clear intent makes it easier to fix e.g. a silly mistake, but it's very hard to fix or even spot bugs if you don't even know what the intended behaviour is.)
-3. **Ease of navigation.** How easy is it for you to navigate around the code? (This is important because you can use your time more efficiently if you are working on a codebase that is easy to navigate.)
+We suggest that you do this within an `exercise-0` subdirectory of this repository.
 
-**'Code smells'** to look out for:
+Once you have done this, you should see the below (as the `pytest` docs say):
 
-- [Duplicate code](https://sourcemaking.com/refactoring/smells/duplicate-code)
-- [Excessive comments](https://sourcemaking.com/refactoring/smells/comments)
-- [Long functions](https://sourcemaking.com/refactoring/smells/long-method).
+```bash
+================================= FAILURES =================================
+_______________________________ test_answer ________________________________
 
-It might be helpful for you to note down where you see instances of this in the provided original code.
+    def test_answer():
+>       assert func(3) == 5
+E       assert 4 == 5
+E        +  where 4 = func(3)
+
+test_sample.py:6: AssertionError
+========================= short test summary info ==========================
+FAILED test_sample.py::test_answer - assert 4 == 5
+============================ 1 failed in 0.12s =============================
+```
+
+Broadly, tests can fail because of two common reasons:
+
+1. The function which is being tested has been incorrectly implemented; or
+2. The function has a correct implementation, but the test is erroneously specified.
+
+In this case, we can't really tell, because it's unclear what `func` is meant to do.
+
+So, replace `test_sample.py` with the following:
+
+```py
+def add_one(n):
+    return n + 1
+
+def add_five(n):
+    return n + 5
+
+def double(n):
+    return n * n
+
+def test_add_one():
+    assert add_one(11) == 10
+
+def test_add_five():
+    assert add_five(11) == 16
+
+def test_double():
+    assert double(11) == 22
+```
+
+Before you run `pytest`, predict: how many tests should be failing, and why?
+
+Now, see if you can get all the tests passing by making appropriate changes to the code:
+
+- if the test is correct, fix the function;
+- if the function is correct, fix the test.
 
 ## Exercise 2: Refactoring an existing solution
 
