@@ -37,7 +37,7 @@ From the [`pytest` docs](https://docs.pytest.org/en/stable/getting-started.html)
 - Read and follow _Install `pytest`_
 - Read and follow _Create your first test_
 
-We suggest that you do this within an `exercise-0` subdirectory of this repository.
+We suggest that you do this within an `exercise-0` subdirectory of this repository. (This means you can easily run all tests relevant _only_ to Exercise 0 by `cd`ing into `exercise-0` and running `pytest` within that directory.)
 
 Once you have done this, you should see the below (as the `pytest` docs say):
 
@@ -99,6 +99,12 @@ Now, see if you can get all the tests passing by making appropriate changes to t
 One of the great things about tests is that they help us refactor code with confidence that you're not unknowingly breaking anything.
 
 (In the last exercise, [Game of Refactoring](https://github.com/WeAreAcademy/mark-induction-proj--game-of-refactoring), what was it like to try to refactor without knowing whether or not things were still behaving as expected?)
+
+Firstly, confirm that the Exercise 1 tests pass by `cd`ing into `exercise-1` and running `pytest`.
+
+Now, inspect the code at `exercise-1/main.py`. It's not great - there have been a couple of TODOs left for us to, um, do.
+
+(`describe_number` in particular looks pretty hard to read and reason about. It miraculously seems to be doing the job, since the tests are passing, but we should try to improve it.)
 
 ## Exercise 3: Sample refactoring investigation
 

@@ -1,3 +1,4 @@
+# TODO: don't use random pointless string addition...
 def hello_world():
     return "Hello" + ", " + "world!"
 
@@ -10,12 +11,12 @@ def greet(name = None):
 
 # TODO: remove if/else hell
 def describe_number(num):
-    # Negative numbers
     if num < 0:
-        if num % 2 == 1:
+        # trying to check for integers
+        if num % 2 == 1 and num == int(num):
             # negative and odd
             return { 'is_even': False, 'is_positive': False }
-        elif num % 2 == 0:
+        elif num % 2 == 0 and num == int(num):
             # negative and even
             return { 'is_even': True, 'is_positive': False }
         else:
@@ -24,7 +25,7 @@ def describe_number(num):
     elif num == 0:
         # zero is a weird number
         return { 'is_even': True, 'is_positive': False }
-    elif num > 0:
+    elif num > 0 and num == int(num):
         if num % 2 == 1:
             # positive and odd
             return { 'is_even': False, 'is_positive': True }
@@ -34,5 +35,9 @@ def describe_number(num):
         else:
             # other weird things happening??
             return { 'is_even': False, 'is_positive': True }
+    else:
+        # let's hope for the best here because I don't know what's going on
+        return { 'is_even': False, 'is_positive': True }
+
 
 
