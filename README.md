@@ -1,7 +1,7 @@
 ---
 module: mark-induction
 
-level: 1
+level: 2
 
 methods:
   - team
@@ -92,18 +92,13 @@ Now, see if you can get all the tests passing by making appropriate changes to t
 - if the test is correct, fix the function;
 - if the function is correct, fix the test.
 
-## Exercise 2: Refactoring an existing solution
+## Exercise 1: Refactoring some existing code
 
-> 🎯 **Success criterion:** a refactored version of the sample solution which removes identified code smells
+> 🎯 **Success criterion:** a refactored version of the exercise 1 code which still passes the existing tests
 
-Now you've been through the existing code, it's time to refactor it.
+One of the great things about tests is that they help us refactor code with confidence that you're not unknowingly breaking anything.
 
-### Refactoring techniques
-
-- [Consolidate Conditional Expression](https://sourcemaking.com/refactoring/consolidate-conditional-expression)
-- [Decompose Conditional](https://sourcemaking.com/refactoring/decompose-conditional)
-- [Extract Method](https://sourcemaking.com/refactoring/extract-method)
-- [Extract Variable](https://sourcemaking.com/refactoring/extract-variable)
+(In the last exercise, [Game of Refactoring](https://github.com/WeAreAcademy/mark-induction-proj--game-of-refactoring), what was it like to try to refactor without knowing whether or not things were still behaving as expected?)
 
 ## Exercise 3: Sample refactoring investigation
 
