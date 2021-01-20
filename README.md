@@ -110,6 +110,11 @@ For `hello_world` and `greet`, see if you can refactor following the suggestion 
 
 When you get to `describe_number`, you'll see it's a bit of a mess. See if you can use things which you've already seen before on identifying code smells and using refactoring techniques.
 
+There are two ways you might find useful to approach the refactor:
+
+1. **Small changes.** It can be overwhelming to work through some foreign code. Try to make one small improvement. (Then another, and another...)
+2. **Start from scratch.** _Sometimes_ it can be easier to rewrite a function from a blank slate.
+
 ## Exercise 2: Commentary and reflection
 
 **Success criterion:** documented reflections.
