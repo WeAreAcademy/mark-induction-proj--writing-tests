@@ -9,7 +9,7 @@ def greet(name = None):
     else:
         return f"Hello, {name}!"
 
-# TODO: remove if/else hell
+# TODO: remove if/else hell and general HOW DO I READ THIS-ness
 def describe_number(num):
     if num < 0:
         # trying to check for integers

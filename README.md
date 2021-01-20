@@ -104,28 +104,12 @@ Firstly, confirm that the Exercise 1 tests pass by `cd`ing into `exercise-1` and
 
 Now, inspect the code at `exercise-1/main.py`. It's not great - there have been a couple of TODOs left for us to, um, do.
 
-(`describe_number` in particular looks pretty hard to read and reason about. It miraculously seems to be doing the job, since the tests are passing, but we should try to improve it.)
+(`describe_number` in particular looks pretty hard to read and reason about. It miraculously seems to be doing the job, since the tests are passing, but we should try to improve it...)
 
-## Exercise 3: Sample refactoring investigation
+For `hello_world` and `greet`, see if you can refactor following the suggestion into the TODO note.
 
-The folder `refactored` has a sample refactoring of `original/main.py`.
+When you get to `describe_number`, you'll see it's a bit of a mess. See if you can use things which you've already seen before on identifying code smells and using refactoring techniques.
 
-Read through it with the same lens of above:
-
-1. Quick big picture
-2. Clarity of intent
-3. Ease of navigation
-
-What are the things which are better in this solution than the original one?
-
-## Exercise 4: Check your understanding
-
-> 🎯 **Success criterion:** a conversation with a Faculty member and amended comments.
-
-Talk to a member of Faculty about your refactored solution and your understanding of code smells and refactoring techniques.
-
-Amend your notes for any important points that come out of the conversation.
-
-## Exercise 5: Commentary and reflection
+## Exercise 2: Commentary and reflection
 
 **Success criterion:** documented reflections.
