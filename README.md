@@ -30,16 +30,18 @@ We're going to look at writing tests for code.
 
 > 🎯 **Success criterion:** You are able to run `pytest` in your terminal and see test results as expected.
 
-We'll be writing tests using the `pytest` framework.
+First of all, [download Anaconda](https://www.anaconda.com/products/individual#Downloads) (we recommend the 64-bit Graphical Installer). You will need to accept the terms and conditions. On your Academy Mac, choose `Install for only Me` due to the permission limitations you have. We can then use anaconda to manage our python packages. 
 
-From the [`pytest` docs](https://docs.pytest.org/en/stable/getting-started.html), you should:
+Restart your terminal and check conda was successfully installed: `conda --version` should give the version number if so. 
 
-- Read and follow _Install `pytest`_
-- Read and follow _Create your first test_
+We'll be writing tests using the `pytest` framework so install it using conda: `conda install -c anaconda pytest`.
 
-We suggest that you do this within an `exercise-0` subdirectory of this repository. (This means you can easily run all tests relevant _only_ to Exercise 0 by `cd`ing into `exercise-0` and running `pytest` within that directory.)
+Let's create our first test. We suggest that you make a sub-directory `exercise-0` to do this within. (This means you can easily run all tests relevant _only_ to Exercise 0 by `cd`ing into `exercise-0` and running `pytest` within that directory.)
 
-Once you have done this, you should see the below (as the `pytest` docs say):
+From the [`pytest` docs](https://docs.pytest.org/en/stable/getting-started.html), read and follow _Create your first test_ . 
+
+
+Executing the tests, you should see the below (as the `pytest` docs say):
 
 ```bash
 ================================= FAILURES =================================
